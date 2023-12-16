@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="main.js"
+      async
+    ></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <div
+      class="container border-0 rounded-5 m-5 bg-white border mx-auto p-0 overflow-hidden"
+    >
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid p-3">
+          <div class="navbar-brand">
+            <img
+              src="img/hero.avif"
+              width="100px"
+              alt=""
+              id="brandImage"
+            />
+            <div class="d-inline-block fs-4 fw-medium">Welcome</div>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNavDropdown"
+          >
+            <ul
+              class="navbar-nav container-fluid d-flex justify-content-end gap-2"
+            >
+              <li class="nav-item">
+                <a
+                  class="btn nav-link bg-orange active"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="btn nav-link"
+                  href="about.html"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content -->
+      <section
+        id="content"
+        class="container p-5 col"
+      >
+        <div
+          class="row align-items-start justify-content-center align-items-center"
+        >
+          <!-- left side -->
+          <div class="col border rounded-3 bg-light col-12 col-lg-5">
+            <form
+              class="p-5"
+              onsubmit="validateForm(event)"
+            >
+              <h4>Welcome to our landing page</h4>
+              <p>Please login to access other features</p>
+              <div class="mb-3">
+                <label
+                  for="username"
+                  class="form-label"
+                  >Username</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username"
+                  onkeyup="usernameValidation()"
+                />
+                <div
+                  id="usernameError"
+                  class="form-text text-danger"
+                >
+                  please fill username
+                </div>
+              </div>
+              <div class="mb-3">
+                <label
+                  for="password"
+                  class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  onkeyup="passwordValidation()"
+                />
+                <div
+                  id="passwordError"
+                  class="form-text text-danger"
+                >
+                  please fill password
+                </div>
+              </div>
+              <div
+                id="capsLockWarning"
+                class="form-text text-warning"
+              >
+                Capslock is ON
+              </div>
+
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="showPassword"
+                />
+                <label
+                  class="form-check-label"
+                  for="showPassword"
+                  >Check me out</label
+                >
+              </div>
+              <div class="d-grid gap-2">
+                <button
+                  class="btn btn-primary bg-orange border-0"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- right side -->
+          <div class="col text-center col-12 col-lg-6">
+            <img
+              src="img/hero.avif"
+              alt=""
+              class="w-50"
+            />
+            <h4 class="fs-5 px-5">
+              "The biggest adventure you can take is to live the life of your
+              dreams" - Oprah Winfrey
+            </h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center fw-medium text-white p-3">
+        © 2023 BTJ Academy
+      </footer>
+
+      <button id="changeTheme">Change Theme</button>
+    </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
